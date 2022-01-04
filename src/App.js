@@ -16,7 +16,6 @@ function App(props) {
   return (
     <div className='app'>
       {/* <Card/> */}
-      {/* <DropDownList cities={cities} /> */}
       <form>
         <div className='header'>
           <p>Здравствуйте,
@@ -33,7 +32,36 @@ function App(props) {
           {editMode ? <input onChange={(e) => {
             setStatusTooltip(statusTooltip = e.target.value);
             e.preventDefault();
-          }} defaultValue={statusTooltip}></input> : <span>{statusValidate(statusTooltip)}</span>}
+          }} defaultValue={statusTooltip} placeholder='Введите статус'></input> : <span>{statusValidate(statusTooltip)}</span>}
+        </div>
+        <div className='selectCity'>
+          <span>
+            Ваш город
+          </span>
+          <DropDownList cities={cities} />
+        </div>
+        <div className='border'></div>
+        <div className='password'>
+          <span className='passwordLabel'>
+            Пароль
+          </span>
+          <input type='password' />
+          <span className='passwordDescription'>Ваш новый пароль должен содержать не менее 5 символов.</span>
+        </div>
+        <div className='password passwordAgain'>
+          <span className='passwordLabelAgain'>
+            Пароль еще раз
+          </span>
+          <input type='password' />
+          <span className='passwordDescription'>Ваш новый пароль должен содержать не менее 5 символов.</span>
+        </div>
+        <div className='border'></div>
+        <div className='password passwordAgain'>
+          <span className='passwordLabelAgain'>
+            Электронная почта
+          </span>
+          <input type='password' />
+          <span className='passwordDescription'>Ваш новый пароль должен содержать не менее 5 символов.</span>
         </div>
       </form >
     </div >
