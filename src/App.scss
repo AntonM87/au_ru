@@ -78,7 +78,9 @@
   border-bottom: 1px solid #e5e4e4;
 }
 .selectCity,
-.password {
+.password,
+.email,
+.agree {
   margin-top: 32px;
   margin-bottom: 32px;
   // border: 1px solid red;
@@ -94,6 +96,7 @@
     margin-right: 170px;
   }
   .passwordLabelAgain {
+    white-space: nowrap;
     margin-right: 85px;
   }
   .passwordDescription {
@@ -102,10 +105,14 @@
     color: #999;
   }
   input {
+    padding-left: 5px;
     margin-right: 18px;
     width: 336px;
     height: 31px;
     font-size: 16px;
+  }
+  input.passwordInputAgain[type="password"] {
+    width: 370px;
   }
   .container {
     display: block;
@@ -119,4 +126,53 @@
 }
 .passwordAgain {
   margin-top: 40px;
+}
+#root {
+  .app {
+    form {
+      div.agree {
+        margin-top: 40px;
+        span {
+          margin-right: 135px;
+        }
+        input.inputAgree {
+          width: 12px;
+          height: 12px;
+        }
+        .emailDescription {
+          font-size: 16px;
+        }
+      }
+      div.email {
+        span {
+          margin-right: 55px;
+        }
+      }
+      div.submit {
+        text-align: center;
+        button {
+          cursor: pointer;
+          margin-left: -230px;
+          margin-right: 12px;
+          width: 110px;
+          height: 40px;
+          color: white;
+          font-size: 18px;
+          background: #71c838;
+          border: none;
+          &:hover {
+            opacity: 0.85;
+          }
+        }
+        span {
+          color: #999999;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+.inputValidate{
+  background: rgb(255, 173, 173);
+  border: 1px solid rgb(255, 121, 121);
 }

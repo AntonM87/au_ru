@@ -91,7 +91,9 @@
 }
 
 .selectCity,
-.password {
+.password,
+.email,
+.agree {
   margin-top: 32px;
   margin-bottom: 32px;
   display: -webkit-box;
@@ -110,44 +112,67 @@
 }
 
 .selectCity span,
-.password span {
+.password span,
+.email span,
+.agree span {
   font-size: 21px;
   margin-right: 140px;
 }
 
 .selectCity .passwordLabel,
-.password .passwordLabel {
+.password .passwordLabel,
+.email .passwordLabel,
+.agree .passwordLabel {
   margin-right: 170px;
 }
 
 .selectCity .passwordLabelAgain,
-.password .passwordLabelAgain {
+.password .passwordLabelAgain,
+.email .passwordLabelAgain,
+.agree .passwordLabelAgain {
+  white-space: nowrap;
   margin-right: 85px;
 }
 
 .selectCity .passwordDescription,
-.password .passwordDescription {
+.password .passwordDescription,
+.email .passwordDescription,
+.agree .passwordDescription {
   margin-right: 0;
   font-size: 12px;
   color: #999;
 }
 
 .selectCity input,
-.password input {
+.password input,
+.email input,
+.agree input {
+  padding-left: 5px;
   margin-right: 18px;
   width: 336px;
   height: 31px;
   font-size: 16px;
 }
 
+.selectCity input.passwordInputAgain[type="password"],
+.password input.passwordInputAgain[type="password"],
+.email input.passwordInputAgain[type="password"],
+.agree input.passwordInputAgain[type="password"] {
+  width: 370px;
+}
+
 .selectCity .container,
-.password .container {
+.password .container,
+.email .container,
+.agree .container {
   display: block;
   margin: 0;
 }
 
 .selectCity .container select,
-.password .container select {
+.password .container select,
+.email .container select,
+.agree .container select {
   width: 336px;
   height: 31px;
   font-size: 16px;
@@ -155,5 +180,56 @@
 
 .passwordAgain {
   margin-top: 40px;
+}
+
+#root .app form div.agree {
+  margin-top: 40px;
+}
+
+#root .app form div.agree span {
+  margin-right: 135px;
+}
+
+#root .app form div.agree input.inputAgree {
+  width: 12px;
+  height: 12px;
+}
+
+#root .app form div.agree .emailDescription {
+  font-size: 16px;
+}
+
+#root .app form div.email span {
+  margin-right: 55px;
+}
+
+#root .app form div.submit {
+  text-align: center;
+}
+
+#root .app form div.submit button {
+  cursor: pointer;
+  margin-left: -230px;
+  margin-right: 12px;
+  width: 110px;
+  height: 40px;
+  color: white;
+  font-size: 18px;
+  background: #71c838;
+  border: none;
+}
+
+#root .app form div.submit button:hover {
+  opacity: 0.85;
+}
+
+#root .app form div.submit span {
+  color: #999999;
+  font-size: 12px;
+}
+
+.inputValidate {
+  background: #ffadad;
+  border: 1px solid #ff7979;
 }
 /*# sourceMappingURL=App.css.map */

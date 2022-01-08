@@ -1,9 +1,9 @@
 import OptionRow from "../OptionRow/OptionRow"
 export default function Select(props) {
-    const { resArr } = props;
+    const { resArr, onChangeCityHandler } = props;
 
     return (
-        <select>
+        <select onChange={(e) => onChangeCityHandler(e)}>
             {
                 resArr.map(city => {
                     return <OptionRow city={city} />

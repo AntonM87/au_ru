@@ -4,7 +4,7 @@ import Select from '../Select/Select'
 
 export default function DropDowList(props) {
 
-    const { cities } = props
+    const { cities, onChangeCityHandler } = props
 
     const filterPopulationArr = cities.filter(city => {
         const population = city.population;
@@ -41,7 +41,7 @@ export default function DropDowList(props) {
 
     return (
         <div className='container'>
-            <Select resArr={resArr} />
+            <Select onChangeCityHandler={onChangeCityHandler} resArr={resArr} />
         </div>
     );
 }
