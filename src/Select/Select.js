@@ -5,8 +5,8 @@ export default function Select(props) {
     return (
         <select onChange={(e) => onChangeCityHandler(e)}>
             {
-                resArr.map(city => {
-                    return <OptionRow city={city} />
+                resArr.map((city, i) => {
+                    return <OptionRow key={i} city={city} />
                 })
             }
         </select>
