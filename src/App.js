@@ -70,6 +70,7 @@ function App(props) {
 
     if (passValid && passValidAgain && password === passwordAgain && emailValid && check) {
       setTimeStamp(timeStamp = new Date());
+
     } else {
       alert('Проверьте заполнение всех полей')
       return;
@@ -146,8 +147,10 @@ function App(props) {
           <span className='emailDescription'>принимать актуальную информацию на емейл.</span>
         </div>
         <div className='submit'>
-          <button type='submit'>Изменить</button>
-          {timeStamp ? <span>Последние изменения {`${timeStamp.getDate()} ${months[timeStamp.getMonth()]} в ${dateFormat(timeStamp.getHours())}:${dateFormat(timeStamp.getMinutes())}:${dateFormat(timeStamp.getSeconds())} `}</span> : null}
+          <div className='submit-container'>
+            <button type='submit'>Изменить</button>
+            {timeStamp ? <span>Последние изменения {`${timeStamp.getDate()} ${months[timeStamp.getMonth()]} в ${dateFormat(timeStamp.getHours())}:${dateFormat(timeStamp.getMinutes())}:${dateFormat(timeStamp.getSeconds())} `}</span> : null}
+          </div>
         </div>
       </form >
     </div >

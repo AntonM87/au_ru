@@ -202,12 +202,37 @@ input[type="email"] {
 }
 
 #root .app form div.submit {
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-#root .app form div.submit button {
+#root .app form div.submit .submit-container {
+  width: 505px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#root .app form div.submit .submit-container button {
   cursor: pointer;
-  margin-left: -230px;
   margin-right: 12px;
   width: 110px;
   height: 40px;
@@ -217,11 +242,12 @@ input[type="email"] {
   border: none;
 }
 
-#root .app form div.submit button:hover {
+#root .app form div.submit .submit-container button:hover {
   opacity: 0.85;
 }
 
-#root .app form div.submit span {
+#root .app form div.submit .submit-container span {
+  margin-left: 20px;
   color: #999999;
   font-size: 12px;
 }
