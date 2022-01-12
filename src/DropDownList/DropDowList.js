@@ -1,10 +1,9 @@
-
 import React, { useState, useEffect } from 'react';
 import Select from '../Select/Select'
 
 export default function DropDowList(props) {
 
-    const { cities, onChangeCityHandler } = props
+    const { cities, onChangeCity } = props
 
     const filterPopulationArr = cities.filter(city => {
         const population = city.population;
@@ -41,7 +40,7 @@ export default function DropDowList(props) {
 
     return (
         <div className='container'>
-            <Select onChangeCityHandler={onChangeCityHandler} resArr={resArr} />
+            <Select onChangeCity={onChangeCity} resArr={resArr} />
         </div>
     );
 }
